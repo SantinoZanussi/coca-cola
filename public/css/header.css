@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 300;
+    line-height: 1.7;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.containerHeader {
+    width: 100%;
+}
+
+.divHeader_main {
+    padding: 40px;
+    text-align: center;
+    background-color: #2B2E38;
+    /* box-shadow: 0 0 15px 15px #42454e; Box shadow para header sin navegación */ 
+}
+
+.divHeader_main img {
+    margin-bottom: 15px; 
+}
+
+.divHeader_main h3 {
+    color: white;
+    font-size: 20px; 
+    font-weight: bold;
+}
+
+.divHeader_other {
+    padding: 40px;
+    text-align: center;
+    background-color: #2B2E38;
+    box-shadow: 0 0 7px 7px #42454e;
+}
+
+.divHeader_other h3 {
+    color: white;
+    font-size: 20px; 
+    font-weight: bold;
+}
+
+.divHeader_other img {
+    margin-bottom: 15px; 
+}
+
+.navMain {
+    background-color: #F40000;
+    box-shadow: 0 0 7px 7px #F40000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+.aAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 40px;
+}
+
+.aAvatar img {
+    margin-left: auto;
+    width: auto;
+    height: 40px;
+}
+
+.navMain li a {
+    margin: 30px; 
+}
+
+ul.itemsBarraNavegacion {
+    display: flex;
+    list-style: none; 
+    margin-top: 15px;
+}
+
+@media (max-width : 600px){
+    ul.itemsBarraNavegacion {
+        display: block;
+        margin-left: -40px; 
+    }   
+    .navMain {
+        background-color: #F40000;
+        box-shadow: 0 0 7 7px #F40000;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+    .dropDown {
+        margin-left: 40px; 
+    }
+}
+
+.dropdown-manu{
+    padding: 50px;
+}
+
+ul.itemsBarraNavegacion .dropDown {
+    margin-right: 30px; 
+}
+
+ul.itemsBarraNavegacion li a {
+    text-decoration: none; 
+    font-size: 15px;
+    font-weight: bold; 
+    color: white;
+}
+
+/* Estilo específico para los botones dropdown (Descubrí, Impacto) */
+ul.itemsBarraNavegacion li a.dropdown-toggle {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilo para los enlaces dentro del menú desplegable */
+ul.itemsBarraNavegacion .dropdown-menu a {
+    text-decoration: none; 
+    font-size: 15px;
+    font-weight: bold; 
+    color: black;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.dropdown-toggle {
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilos para la transición */
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Mostrar el menú con transición */
+.dropDown:hover .dropdown-menu {
+    max-height: 200px; /* Ajusta según la cantidad de opciones */
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

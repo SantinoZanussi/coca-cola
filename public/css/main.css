@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 300;
+    line-height: 1.7;
+    box-sizing: border-box;
+}
+
+
+.title {
+    margin-bottom: 32px;
+    margin-top: 56px;
+    justify-content: center;
+    display: flex;
+}
+
+.title h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.brand-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.brand-item h2 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.brand {
+    width: 230px;
+    height: 230px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand:hover {
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.brand:not(:hover) {
+    transition: 0.5s;
+}
+
+.brand img {
+    width: 80%;
+    height: auto;
+    pointer-events: none;
+}
+
+.containerButton {
+    margin-bottom: 32px;
+    margin-top: 56px;
+    justify-content: center;
+    display: flex;
+}
+
+.containerButton button {
+    font-weight: bold;
+    width: 327px;
+    border-radius: 10px;
+    background: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.containerButton button:hover {
+    color: white;
+    background-color: #F40000;
+    transition: 0.4s;
+}
+
+.containerButton button:not(:hover) {
+    transition: 0.4s;
+}

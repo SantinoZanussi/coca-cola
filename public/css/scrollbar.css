@@ -1,0 +1,19 @@
+/* -----------SCROLLBAR----------- */
+
+body::-webkit-scrollbar {
+    width: 13px;
+}
+
+body::-webkit-scrollbar-track {
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1F2029;
+    border: 1px solid #2B2E38;
+    border-radius: 6px;
+}  
+
+table td:nth-child(add) tr {
+    background-color: black;
+}

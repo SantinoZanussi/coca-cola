@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola Company - Iniciar Sesión</title>
+    <link rel="icon" href="../../assets/coca-cola-logo-icon.png" type="image/x-icon">
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="../../css/scrollbar.css">
+    <link rel="stylesheet" href="../../css/iniciar_sesion.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="../../assets/coca-cola-logo-icon.png" alt="Coca-Cola Logo" width="100">
+            <h2>The Coca-Cola Company</h2>
+        </div>
+        
+        <p id="errorMensaje" class="error-message"></p>
+        <form id="formLogin">
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Contraseña" required>
+            </div>
+            
+            <button type="submit">Iniciar sesión</button>
+            
+        </form>
+
+        <a href="/registro"><button class="register">Registrarse</button></a>
+        
+        <div class="login-links">
+            <a href="/">Volver al inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/script_frontend.js" type="module"></script>
+</body>
+</html>

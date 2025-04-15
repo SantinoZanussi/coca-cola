@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola Company - Panel de Administrador</title>
+    <link rel="icon" href="../../assets/coca-cola-logo-icon.png" type="image/x-icon">
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="../../css/scrollbar.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script src="../js/script_frontend.js" type="module"></script>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/coca-cola-logo-icon.png" alt="Coca-Cola Logo" class="sidebar-logo">
+                <h2>Panel Admin</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#usuarios"><i class="fas fa-users"></i> Usuarios</a>
+                    </li>
+                    <li>
+                        <a href="#productos"><i class="fas fa-bottle-water"></i> Productos</a>
+                    </li>
+                    <li>
+                        <a href="#pedidos"><i class="fas fa-shopping-cart"></i> Pedidos</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="/" id="volver-inicio" class="btn-sidebar"><i class="fas fa-home"></i> Volver al Inicio</a>
+                <a href="#" id="cerrar-sesion" class="btn-sidebar"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+            </div>
+        </aside>
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="header-title">
+                    <button id="toggle-sidebar" class="toggle-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="header-user">
+                    <div class="user-info">
+                        <span class="user-name">Admin Coca-Cola</span>
+                        <img src="../../assets/admin-avatar.png" alt="Admin" class="user-avatar">
+                    </div>
+                </div>
+            </header>
+
+            <div class="wave-decoration">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                    <path fill="#f40009" fill-opacity="1" d="M0,64L80,64C160,64,320,64,480,53.3C640,43,800,21,960,16C1120,11,1280,21,1360,26.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+                </svg>
+            </div>
+            
+            <div class="admin-content">
+                <section class="summary-cards">
+                    <div class="card">
+                        <div class="card-icon users">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Usuarios</h3>
+                            <p class="card-value">2,584</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon products">
+                            <i class="fas fa-bottle-water"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Productos</h3>
+                            <p class="card-value">145</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon orders">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Pedidos</h3>
+                            <p class="card-value">943</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="content-usuarios" class="table-section" style="display: none;">
+                    <div class="table-header">
+                        <h3>Gestión de Usuarios</h3>
+                        <button class="btn btn-primary" id="btn-add-usuario">Añadir Usuario</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Usuario</th>
+                                    <th>Email</th>
+                                    <th>Fecha Registro</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usuarios-table-body">
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>María López</td>
+                                    <td>maria@ejemplo.com</td>
+                                    <td>15/03/2025</td>
+                                    <td><span class="status active">Activo</span></td>
+                                    <td class="actions">
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1233</td>
+                                    <td>Carlos Ruiz</td>
+                                    <td>carlos@ejemplo.com</td>
+                                    <td>14/03/2025</td>
+                                    <td><span class="status active">Activo</span></td>
+                                    <td class="actions">
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="content-productos" class="table-section" style="display: none;">
+                    <div class="table-header">
+                        <h3>Gestión de Productos</h3>
+                        <button class="btn btn-primary" id="btn-add-producto">Añadir Producto</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productos-table-body">
+                                <!-- Los datos se cargarán dinámicamente desde la base de datos -->
+                                <tr>
+                                    <td>#P001</td>
+                                    <td><img src="../../assets/product-thumb.png" alt="Coca-Cola" width="40"></td>
+                                    <td>Coca-Cola Classic 2L</td>
+                                    <td>Bebidas</td>
+                                    <td>$2.50</td>
+                                    <td>120</td>
+                                    <td><span class="status active">Disponible</span></td>
+                                    <td class="actions">
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#P002</td>
+                                    <td><img src="../../assets/product-thumb.png" alt="Coca-Cola Light" width="40"></td>
+                                    <td>Coca-Cola Light 1L</td>
+                                    <td>Bebidas</td>
+                                    <td>$1.75</td>
+                                    <td>85</td>
+                                    <td><span class="status active">Disponible</span></td>
+                                    <td class="actions">
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="content-pedidos" class="table-section" style="display: none;">
+                    <div class="table-header">
+                        <h3>Gestión de Pedidos</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Pedido</th>
+                                    <th>Cliente</th>
+                                    <th>Fecha</th>
+                                    <th>Total</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pedidos-table-body">
+                                <tr>
+                                    <td>#O1234</td>
+                                    <td>Juan Pérez</td>
+                                    <td>23/03/2025</td>
+                                    <td>$45.75</td>
+                                    <td><span class="status pending">Pendiente</span></td>
+                                    <td class="actions">
+                                        <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#O1233</td>
+                                    <td>Ana Fernández</td>
+                                    <td>22/03/2025</td>
+                                    <td>$29.90</td>
+                                    <td><span class="status active">Completado</span></td>
+                                    <td class="actions">
+                                        <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                >
+                <section id="content-dashboard" class="table-section">
+                    <div class="table-header">
+                        <h3>Últimos Usuarios Registrados</h3>
+                        <button class="btn btn-primary" id="btn-ver-usuarios">Ver Todos</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Usuario</th>
+                                    <th>Email</th>
+                                    <th>Fecha Registro</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>María López</td>
+                                    <td>maria@ejemplo.com</td>
+                                    <td>15/03/2025</td>
+                                    <td><span class="status active">Activo</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#1233</td>
+                                    <td>Carlos Ruiz</td>
+                                    <td>carlos@ejemplo.com</td>
+                                    <td>14/03/2025</td>
+                                    <td><span class="status active">Activo</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#1232</td>
+                                    <td>Laura Gómez</td>
+                                    <td>laura@ejemplo.com</td>
+                                    <td>13/03/2025</td>
+                                    <td><span class="status inactive">Inactivo</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Sección de actividad reciente -->
+                <section class="recent-activity">
+                    <div class="section-header">
+                        <h3>Actividad Reciente</h3>
+                        <button class="btn-text">Ver Todo</button>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon order">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p class="activity-text"><strong>Nuevo pedido</strong> de Juan Pérez</p>
+                                <p class="activity-time">Hace 5 minutos</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon user">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p class="activity-text"><strong>Nuevo usuario</strong> registrado</p>
+                                <p class="activity-time">Hace 15 minutos</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon product">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p class="activity-text"><strong>Producto actualizado:</strong> Coca-Cola Light 2L</p>
+                                <p class="activity-time">Hace 30 minutos</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon alert">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p class="activity-text"><strong>Alerta:</strong> Stock bajo de Coca-Cola Zero</p>
+                                <p class="activity-time">Hace 45 minutos</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="admin-footer">
+                <p>&copy; 2025 Coca-Cola Company. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Soporte</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle sidebar
+            document.getElementById('toggle-sidebar').addEventListener('click', function() {
+                document.querySelector('.admin-container').classList.toggle('sidebar-collapsed');
+            });
+
+            // Navegación entre secciones
+            const sections = {
+                'dashboard': document.getElementById('content-dashboard'),
+                'usuarios': document.getElementById('content-usuarios'),
+                'productos': document.getElementById('content-productos'),
+                'pedidos': document.getElementById('content-pedidos')
+            };
+
+            // Agregar event listeners a los enlaces del menú
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Actualizar la clase activa en la navegación
+                    document.querySelectorAll('.sidebar-nav li').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    this.parentElement.classList.add('active');
+                    
+                    // Actualizar el título del header
+                    document.querySelector('.header-title h1').textContent = this.textContent.trim();
+                    
+                    // Mostrar la sección correspondiente y ocultar las demás
+                    for (const key in sections) {
+                        if (sections[key]) {
+                            sections[key].style.display = key === targetId ? 'block' : 'none';
+                        }
+                    }
+                });
+            });
+
+            // Enlaces directos
+            document.getElementById('btn-ver-usuarios').addEventListener('click', function() {
+                // Simular clic en el enlace de usuarios
+                document.querySelector('a[href="#usuarios"]').click();
+            });
+
+            // Preparar funciones para los botones de acción (a implementar con base de datos)
+            document.querySelectorAll('.btn-icon').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Aquí se implementará la lógica para editar, eliminar, etc.
+                    const action = this.querySelector('i').classList.contains('fa-edit') ? 'editar' : 
+                                  this.querySelector('i').classList.contains('fa-trash') ? 'eliminar' : 
+                                  this.querySelector('i').classList.contains('fa-eye') ? 'ver' : 'acción';
+                    
+                    const row = this.closest('tr');
+                    const id = row.querySelector('td:first-child').textContent;
+                    
+                    console.log(`${action} elemento con ID: ${id}`);
+                    // Aquí se implementará la lógica con la base de datos
+                });
+            });
+
+            // Botones para añadir
+            const addButtons = {
+                'btn-add-usuario': function() {
+                    console.log('Añadir nuevo usuario');
+                    // Aquí se implementará la lógica para añadir usuarios
+                },
+                'btn-add-producto': function() {
+                    console.log('Añadir nuevo producto');
+                    // Aquí se implementará la lógica para añadir productos
+                }
+            };
+
+            for (const btnId in addButtons) {
+                const btn = document.getElementById(btnId);
+                if (btn) {
+                    btn.addEventListener('click', addButtons[btnId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
