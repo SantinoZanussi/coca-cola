@@ -5,24 +5,24 @@
 ## 🌐 Tecnologías utilizadas
 
 ### 🧱 Frontend
-- HTML
-- CSS
-- JavaScript
+* HTML
+* CSS
+* JavaScript
 
 ### 🖥️ Backend
-- Node.js
-- Express
-- MongoDB + Mongoose
-- APIs REST
+* Node.js
+* Express
+* MongoDB + Mongoose
+* APIs REST
 
 ---
 
 ## 🎯 Objetivo del Proyecto
 
-- Maquetación profesional con HTML y CSS.
-- Lógica dinámica con JavaScript.
-- Manejo de base de datos MongoDB usando Mongoose.
-- Administración básica de productos y usuarios.
+* Maquetación profesional con HTML y CSS.
+* Lógica dinámica con JavaScript.
+* Manejo de base de datos MongoDB usando Mongoose.
+* Administración básica de productos y usuarios.
 
 ---
 
@@ -30,16 +30,16 @@
 
 Actualmente en desarrollo. Faltantes por orden de prioridad:
 
-- 🗃️ Base de datos con usuarios (registro, login y compras) + panel admin para editar precios.
-- 🛒 Pestaña de compra de productos (con procesador de pagos *ficticio*).
-- 🏠 Funcionalidad de logo principal: redirecciona a `index.html` (excepto desde el propio index).
-- 🏷️ Pestañas de texto: `Marcas`, `Descubrir`, `Impacto`. [texto]
-- 📜 Footer con enlaces informativos: `Sobre Nosotros` y `Legal`. [texto]
+* 🗃️ Base de datos con usuarios (registro, login y compras) + panel admin para editar precios.
+* 🛒 Pestaña de compra de productos (con procesador de pagos *ficticio*).
+* 🏠 Funcionalidad de logo principal: redirecciona a `index.html` (excepto desde el propio index).
+* 🏷️ Pestañas de texto: `Marcas`, `Descubrir`, `Impacto`. [texto]
+* 📜 Footer con enlaces informativos: `Sobre Nosotros` y `Legal`. [texto]
 
 ---
 
 ## 📁 Estructura del Proyecto
-```text
+```
 proyecto/
 │
 ├── frontend/
@@ -58,12 +58,9 @@ proyecto/
 
 ## 🗄️ Base de Datos
 
-- **Usuario MongoDB:**
-dbUser | gQCU8LUpmav2rUfe
-
-- **URL de conexión:**
-mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
-
+* **Usuario de MongoDB:** `dbUser`
+* **Contraseña de MongoDB:** `gQCU8LUpmav2rUfe`
+* **URL de conexión:** `mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/`
 
 - **Archivo `.env`** (ubicado en `proyecto/backend/.env`):
 
