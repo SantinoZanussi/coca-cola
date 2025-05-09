@@ -1,22 +1,73 @@
-Falta - Por orden de prioridad:
+# 🥤 Coca-Cola Web
 
-- base de datos con mongoose (usuario para comprar productos, panel de admin [precios])
- - pestaña para comprar (procesador de pagos fake)
-- en cada pestaña el logo principal al hacer click lo llevara al index.html (menos en el propio index)
-- pestaña de marcas [texto]
-- pestaña de descubrir [texto]
-- pestaña de impacto [texto]
-- pestañas de footer (sobre nosotros, legal) [texto]
+---
 
-Cuenta db:
-dbUser | gQCU8LUpmav2rUfe | mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
+## 🌐 Tecnologías utilizadas
 
-.env: (Ubicado en: proyecto/backend/.env)
-PORT = 5000
-MONGO_URL = mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
-BASE_URL = http://localhost:5000
+### 🧱 Frontend
+- HTML
+- CSS
+- JavaScript
 
-Instrucciones:
-- npm i (proyecto/) [Si las dependencias no estan instaladas]
-- cd backend
-- node server.js [Para arrancar]
+### 🖥️ Backend
+- Node.js
+- Express
+- MongoDB + Mongoose
+- APIs REST
+
+---
+
+## 🎯 Objetivo del Proyecto
+
+- Maquetación profesional con HTML y CSS.
+- Lógica dinámica con JavaScript.
+- Manejo de base de datos MongoDB usando Mongoose.
+- Administración básica de productos y usuarios.
+
+---
+
+## 🚧 Estado del Proyecto
+
+Actualmente en desarrollo. Faltantes por orden de prioridad:
+
+- 🗃️ Base de datos con usuarios (registro, login y compras) + panel admin para editar precios.
+- 🛒 Pestaña de compra de productos (con procesador de pagos *ficticio*).
+- 🏠 Funcionalidad de logo principal: redirecciona a `index.html` (excepto desde el propio index).
+- 🏷️ Pestañas de texto: `Marcas`, `Descubrir`, `Impacto`. [texto]
+- 📜 Footer con enlaces informativos: `Sobre Nosotros` y `Legal`. [texto]
+
+---
+
+## 📁 Estructura del Proyecto
+
+proyecto/
+│
+├── frontend/
+│ ├── index.html
+│ ├── estilos/
+│ └── scripts/
+│
+├── backend/
+│ ├── models/
+│ ├── routes/
+│ ├── server.js
+│ └── .env
+
+
+---
+
+## 🗄️ Base de Datos
+
+- **Usuario MongoDB:**
+dbUser | gQCU8LUpmav2rUfe
+
+- **URL de conexión:**
+mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
+
+
+- **Archivo `.env`** (ubicado en `proyecto/backend/.env`):
+
+```env
+PORT=5000
+MONGO_URL=mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
+BASE_URL=http://localhost:5000
