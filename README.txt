@@ -38,6 +38,24 @@ Actualmente en desarrollo. Faltantes por orden de prioridad:
 
 ---
 
+## 📁 Estructura del Proyecto
+```
+proyecto/
+│
+├── frontend/
+│ ├── index.html
+│ ├── estilos/
+│ └── scripts/
+│
+├── backend/
+│ ├── models/
+│ ├── routes/
+│ ├── server.js
+│ └── .env
+```
+
+---
+
 ## 🗄️ Base de Datos
 
 * **Usuario de MongoDB:** `dbUser`
@@ -46,8 +64,12 @@ Actualmente en desarrollo. Faltantes por orden de prioridad:
 
 - **Archivo `.env`** (ubicado en `proyecto/backend/.env`):
 
-```env
-PORT=5000
-MONGO_URL=mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
-BASE_URL=http://localhost:5000
-```
+---
+
+## 👥 Creador
+
+Este proyecto fue desarrollado por:
+
+- 👨‍💻 **Santino Zanussi**
+
+---
