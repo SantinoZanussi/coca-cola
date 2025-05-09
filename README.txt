@@ -39,7 +39,7 @@ Actualmente en desarrollo. Faltantes por orden de prioridad:
 ---
 
 ## 📁 Estructura del Proyecto
-
+```text
 proyecto/
 │
 ├── frontend/
@@ -52,7 +52,7 @@ proyecto/
 │ ├── routes/
 │ ├── server.js
 │ └── .env
-
+```
 
 ---
 
@@ -71,3 +71,4 @@ mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
 PORT=5000
 MONGO_URL=mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
 BASE_URL=http://localhost:5000
+```
