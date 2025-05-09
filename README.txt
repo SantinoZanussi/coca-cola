@@ -38,24 +38,6 @@ Actualmente en desarrollo. Faltantes por orden de prioridad:
 
 ---
 
-## 📁 Estructura del Proyecto
-```
-proyecto/
-│
-├── frontend/
-│ ├── index.html
-│ ├── estilos/
-│ └── scripts/
-│
-├── backend/
-│ ├── models/
-│ ├── routes/
-│ ├── server.js
-│ └── .env
-```
-
----
-
 ## 🗄️ Base de Datos
 
 * **Usuario de MongoDB:** `dbUser`
