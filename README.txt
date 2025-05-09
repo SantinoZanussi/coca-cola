@@ -52,3 +52,14 @@ Actualmente, el proyecto se encuentra **en desarrollo**. Las siguientes funciona
 PORT=5000
 MONGO_URL=mongodb+srv://dbUser:gQCU8LUpmav2rUfe@cluster0.tuepu.mongodb.net/
 BASE_URL=http://localhost:5000
+```
+
+---
+
+## 👥 Creador
+
+Este proyecto fue desarrollado por:
+
+- 👨‍💻 **Santino Zanussi**
+
+---
